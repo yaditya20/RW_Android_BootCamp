@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="name">Aditya Yadav</string>
+    <string name="address">Mumbai, Maharashtra, India</string>
+    <string name="twitterHandle">\@yaditya20</string>
+    <string name="myFavBookInitialMessage">Tap on the below button to see my favorite book</string>
+    <string name="emailID">yaditya20@gmail.com</string>
+    <string name="imageContent">Aditya Yadav Logo</string>
+    <string name="shareContact">Share Contact</string>
+    <string name="changeBook">Change Book</string>
+    <string name="aboutMenu">About</string>
+    <string name="aboutTitle">Business Card %s</string>
+    <string name="aboutMessage">Created by @d!+y@</string>
+    <string name="myFavBook">My Favorite Book is: %s</string>
+    <string-array name="my_books">
+        <item>Java: The Complete Reference</item>
+        <item>This Love That Feels Right!</item>
+        <item>A Monk Who Sold his Ferrari!</item>
+        <item>The 3 Mistakes of My Life</item>
+        <item>One Indian Girl</item>
+    </string-array>
+</resources>
