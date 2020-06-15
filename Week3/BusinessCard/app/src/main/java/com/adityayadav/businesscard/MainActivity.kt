@@ -3,6 +3,7 @@ package com.adityayadav.businesscard
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         changeBookButton = findViewById(R.id.changeBookButton)
 
         changeBookButton.setOnClickListener { view ->
+            val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
+            view.startAnimation(bounceAnimation)
             getRandomBook()
         }
     }
@@ -59,5 +62,7 @@ class MainActivity : AppCompatActivity() {
         val books = res.getStringArray(R.array.my_books)
         val randomBook = Random.nextInt(books.size)
         bookTextView.text = getString(R.string.myFavBook, books[randomBook])
+        val blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
+        bookTextView.startAnimation(blinkAnimation)
     }
 }
