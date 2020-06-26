@@ -9,8 +9,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/image_height"
-        android:layout_height="@dimen/image_height"
+        android:layout_width="366dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:contentDescription="@string/imageContent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,13 +22,15 @@
 
     <TextView
         android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="366dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/rock_salt"
         android:text="@string/name"
         android:textAlignment="center"
         android:textColor="@color/nameTextColor"
-        android:textSize="@dimen/name_text_size"
+        android:textSize="36sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +44,7 @@
         android:text="@string/twitterHandle"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/info_text_size"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/emailIDTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +59,7 @@
         android:text="@string/emailID"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/info_text_size"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/addressTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +73,7 @@
         android:text="@string/address"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/info_text_size"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/bookTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,8 +87,8 @@
         android:text="@string/myFavBookInitialMessage"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/info_text_size"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/changeBookButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/addressTextView" />
@@ -105,13 +110,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.45" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
