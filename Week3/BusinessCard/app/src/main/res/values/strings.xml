@@ -11,7 +11,7 @@
     <string name="aboutMenu">About</string>
     <string name="aboutTitle">Business Card %s</string>
     <string name="aboutMessage">Created by @d!+y@</string>
-    <string name="myFavBook">My Favorite Book is: %s</string>
+    <string name="myFavBook">My Favorite Book is:\n %s</string>
     <string-array name="my_books">
         <item>Java: The Complete Reference</item>
         <item>This Love That Feels Right!</item>

@@ -1,6 +1,7 @@
 package com.adityayadav.businesscard
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.animation.AnimationUtils
@@ -12,8 +13,9 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    internal lateinit var bookTextView: TextView
-    internal lateinit var changeBookButton: Button
+    private lateinit var bookTextView: TextView
+    private lateinit var changeBookButton: Button
+    private var bookName: String? = null
 
     companion object {
         private val TAG = MainActivity::class.java.simpleName
@@ -31,6 +33,26 @@ class MainActivity : AppCompatActivity() {
             val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
             view.startAnimation(bounceAnimation)
             getRandomBook()
+        }
+
+        if (savedInstanceState != null) {
+            restoreBook(savedInstanceState)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(BOOK_KEY, bookName)
+
+        Log.d(TAG, "onSaveInstanceState: Saving book: $bookName")
+    }
+
+    private fun restoreBook(savedInstanceState: Bundle?) {
+        bookName = savedInstanceState?.getString(BOOK_KEY)
+        if (bookName != null) {
+            bookTextView.text = getString(R.string.myFavBook, bookName)
+        } else {
+            bookTextView.text = getString(R.string.myFavBookInitialMessage)
         }
     }
 
@@ -61,7 +83,8 @@ class MainActivity : AppCompatActivity() {
         val res = resources
         val books = res.getStringArray(R.array.my_books)
         val randomBook = Random.nextInt(books.size)
-        bookTextView.text = getString(R.string.myFavBook, books[randomBook])
+        bookName = books[randomBook]
+        bookTextView.text = getString(R.string.myFavBook, bookName)
         val blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
         bookTextView.startAnimation(blinkAnimation)
     }
