@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="@dimen/padding_standard"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:strokeColor="@color/colorPrimaryDark"
+    app:strokeWidth="5dp"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".fragment.MovieDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/movie_name_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                android:textColor="@android:color/white"
+                android:padding="@dimen/padding_standard"
+                tools:text="Movie Title" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/movie_poster_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/movie_poster"
+                android:padding="@dimen/padding_half"
+                tools:src="@drawable/ic_launcher_foreground" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/movie_release_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/movie_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:padding="@dimen/padding_standard"
+                tools:text="@string/movie_release_date" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
+
+        <FrameLayout
+            android:id="@+id/movie_director_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movie_director"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:padding="@dimen/padding_standard"
+                tools:text="@string/movie_director" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
+
+        <FrameLayout
+            android:id="@+id/movie_rating_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/movie_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:padding="@dimen/padding_standard"
+                tools:text="@string/movie_rating" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/movie_summary_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/movie_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:padding="@dimen/padding_standard"
+                tools:text="@string/movie_summary" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
